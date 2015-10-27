@@ -1,0 +1,6 @@
+- Takes a function that returns a boolean as the first argument, and a collection as the second argument.
+
+- Returns the result of running the function on every item in the collection, if it returned "True".
+  - Example:
+      squares = map(lambda x: x**2, range(10))
+      filter(lambda x: x > 5 and x < 50, squares)   # returns [9, 16, 25, 36, 49]
