@@ -1,0 +1,8 @@
+- API between user space and kernel space.
+- How a program requests a service from the kernel.
+- Five major categories of system calls:
+	- Process Control
+	- File Management
+	- Device Management
+	- Information Maintenance
+	- Communication
