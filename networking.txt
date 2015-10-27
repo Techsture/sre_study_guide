@@ -1,0 +1,205 @@
+- Network Theory
+	- The study of complex interacting systems.
+	- Can be represented as graphs (vertices connected by edges).
+	- Used to find the optimal way of doing something (combinatorial optimization).
+
+- Routers
+	- Forwards data packets between computer networks.
+	- Perform the "traffic directing" functions of Internet.
+
+- Firewalls
+	- Network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
+	- Categorized as network or host-based.
+
+- Protocols
+
+  - TCP/IP
+  	- Transmission Control Protocol/Internet Protocol
+  	- Specifies how data should be packetized, addressed, transmitted, routed, and received at the destination.
+  	- Organized into four abstraction layers:
+  		- Link
+  			- Used to move packets between the Internet layer of two different hosts on the same link.
+  		- Internet
+  			- Sends packets of data (datagrams) across potentially multiple networks.
+  		- Transport
+  			- End-to-end message transmission independent of the underlying network.
+  			- Responsible for error control, segmentation, flow control, congestion control, and application addressing (port numbers).
+  		- Application
+  			- HTTP, FTP, SMTP, DHCP, DNS, etc.
+  			- Distinguishes between user and support protocols. Examples are:
+  				- User Protocol: FTP
+  				- System Protocol: DNS
+    - Benefits over UDP:
+      - Reliable
+        - TCP managers message acknowledgement, retransmission, and timeout.
+      - Ordered
+        - If data segments arrive in the wrong order, TCP buffers the out-of-order data until it can be properly reordered and deliver to the application.
+      - Streaming:
+        - Data is read as a stream; no distinguishing indications are transmitted to signal segment boundaries.
+    - Protocol Operation:
+      - LISTEN (Server)
+        - Waiting for a connection request from any remote TCP and port.
+      - SYN-SENT (Client)
+        - Waiting for a matching response after sending a connection request.
+      - SYN-RECEIVED (Server)
+        - Waiting for a connection request acknowledgement after having both received and sent a connection request.
+      - ESTABLISHED (Client & Server)
+        - Represents an open connection.
+      - FIN-WAIT-1 (Client & Server)
+        - Waiting for a termination request from the remote machine, or acknowledgement of a previously sent connection termination request.
+      - FIN-WAIT-2 (Client & Server)
+        - Waiting for a termination request from the remote machine.
+      - CLOSE-WAIT (Client & Server)
+        - Waiting for a termination request from the local user.
+      - CLOSING (Client & Server)
+        - Waiting for a termination request acknowledgement from the remote machine.
+      - LAST-ACK (Client & Server)
+        - Waiting for an acknowledgement of the connection termination request (which includes an acknowledgement of its connection termination request).
+      - TIME_WAIT (Client or Server)
+        - Waiting for enough time to pass to ensure the remote machine received the acknowledgement of its termination request.
+        - Maximum wait time is 4 minutes (MSL (Maximum Segment Lifetime)).
+      - CLOSED (Client & Server)
+        - No connection
+    - Connection Establishment
+      - Before a client attempts to connect with a server, the server must first bind to and listen at a port to open it up for connections (referred to as a "passive open").
+      - Once a passive open is establised, the client may initiate an "active open".
+      - To establish a connection, TCP uses a three-way handshake:
+        - SYN
+          - Client sends a SYN to the server.
+          - The client sets the segment's sequence number to a random value (A).
+        - SYN_ACK
+          - The server replies with a SYN-ACK.
+          - The acknowledgement is set to A+1.
+          - The sequence number that the server chooses for the packet is another random value (B).
+        - ACK
+          - The client sends an ACK to the server.  The sequence number is set to the received acknowledgement value (A+1).
+          - The acknowledgement number is set to one more than the received sequence (B+1).
+
+  - UDP
+  	- User Datagram Protocol
+  	- Connectionless transmission model with a minimum of protocol mechanism.
+  		- No handshaking which exposes programs using UDP to any unreliability of the underlying network protocol.
+  	- No guarantee of delivery, ordering, or duplication protection.
+  	- Provides checksums for data integrity and port numbers for addressing different functions at the source and destination of the datagram.
+    - Packet Structure:
+      - Source Port
+      - Destination Port
+      - Length
+      - Checksum
+    - Benefits over TCP:
+      - Lightweight
+        - No ordering of messages
+        - No connection tracking
+      - Datagrams
+        - Packets are sent individually and checked for integrity only if they arrive.
+      - Broadcasts
+        - Being connectionless, UDP can broadcast; sent packets can be addressed to be receivable by all devices on a subnet.
+
+  - ICMP
+  	- Internet Control Message Protocol
+  	- Used by network devices to send error messages (such as a TTL reaching 0).
+  	- Not regulary used by end-user applications (with the exception of diagnostic tools like ping and traceroute).
+
+- Network Tracing
+	- tcpdump
+		- tcpdump -i <interface> <protocol> port <portNumber>
+		- tracert <dnsOrIp>
+
+- MAC Addresses
+	- Media Access Control Address or Physical Address
+	- Unique identifier assigned to network interfaces.
+	- 48-bit (6 octets)
+
+- IP Packets
+  - All are structured the same way; an IP header followed by a variable-length data field.  Header fields are as follows:
+    - Version
+      - Indicates the format of the Internet header.
+    - IHL (Internet Header Length)
+      - The length of the Internet header, which points to the beginning of the data.
+    - Type of Service
+      - Defines parameters about the desired QoS.
+    - Total Length
+      - Length of the datagram, including header and data.
+    - Identification
+      - Assigned by the sender to add in assembling the fragments of a datagram.
+    - Flags
+      - Various control flags.
+    - Fragment Offset
+      - Indicates where in the datagram the fragment belongs.
+    - Time To Live (TTL)
+      -  The maximum time the datagram is allowed to remain in the Internet system in seconds.
+    - Protocol
+      - Indicates the next level protocol used in the data portion of the datagram.
+    - Header Checksum
+      - Checksum for header only.
+      - Since some header fields change, this is verified and recomputed at each point that the header is processed.
+    - Source Address
+    - Destination Address
+    - Options
+    - Padding
+      - Used to ensure that the header ends on a 32-bit boundry.
+
+- DNS
+	- Domain Name System
+	- Naming system for resources connected to Internet or private networks.
+	- Translates domain names to IP addresses.
+	- A DNS name server stores the DNS records for a domain name and responds with answers to queries against its database.
+
+- OSI Layers
+  - Mnemonic: Please Do Not Throw Sausage Pizza Away
+  - 1: Physical
+    - Transmission and reception of raw bit streams over a physical medium.
+      - Ethernet
+      - DSL
+      - USB
+      - DOCSIS
+  - 2: Data Link
+    - Reliable transmission of data frames between two nodes connected by a physical layer.
+      - LLDP
+      - PPP
+      - IEEE 802.2
+  - 3: Network
+    - Structuring and managing a multi-node network, including addressing, routing, and traffic control.
+      - IPv4
+      - IPv6
+      - ICMP
+  - 4: Transport
+    - Reliable transmission of data segments between points on a network.
+      - TCP
+      - UDP
+  - 5: Session
+    - Managing exchange of information in the form of multiple transmissions back and forth between two.
+      - SSL
+      - SQL
+  - 6: Presentation
+    - Translation of data between a networking service and application, including character encoding, data compression, and encryption/decryption.
+      - HTML
+      - CSS
+      - GIF
+  - 7: Application
+    - High-level APIs, including resource sharing, remote file access, directory services, and virtual terminals.
+      - HTTP
+      - FTP
+      - Telnet
+      - SSH
+
+- Load Balancing
+  - Distributes workloads across multiple computing resources.
+  - Algorithm examples:
+    - Random
+    - Round Robin
+      - Just goes around in a loop
+    - Weighted Round Robin
+      - Same as round robin, except some servers get a larger share of the overall traffic.
+    - Source IP
+      - Connections are distributed to the backend servers based on a hash of the source IP address.
+      - As long as all servers are running, a give client IP address will always go to the same web server.
+    - URL
+      - Connections are distributed to the backend servers based on a hash of the URL request.
+      - Useful when balancing in front of caches since requests for a given object will always go to just one backend cache, avoiding cache duplication.
+    - Least Connections
+      - Load balancer monitors the number of open connections for each server and sends to the least busy of them.
+    - Least Traffic
+      - Load balancer monitors the bitrate from each server and sends to the one with the least amount of outgoing traffic.
+    - Least Latency
+      - A simple request is made to each server and the load is sent to the first responder.
