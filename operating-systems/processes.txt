@@ -1,0 +1,70 @@
+- Processes
+  - A process is an executing program
+  - Made up of:
+    - Program Code
+    - Machine Registers
+    - Global Data
+    - Stack
+    - Open Files (File Descriptors)
+    - An Environmnet (Environment Variables, Security Credentials)
+      - Key=Value Pairs
+    - Context Information
+      - Process ID (PID)
+        - Positive integer that uniquely identifies a running process
+        - Stored in a variable of type pid_t
+      - Parent Process ID (PPID)
+      - Real User ID
+        - ID of the user or process which started this process.
+      - Effective User ID
+        - ID of the user who wrote the process' program
+      - Current Directory
+      - File Descriptor Table
+      - Environment
+      - Pointer to Program Code
+      - Pointer to Data
+        - Memory for global variables
+      - Pointer to Stack
+        - Memory for local variables
+      - Pointer to Heap
+        - Dynamically allocated
+      - Execution Priority
+      - Signal Information
+  - Important File System Processes
+    - init
+      - Started at boot time
+      - Responsible for starting other processes
+      - Uses file inittab & directories /etc/rc?.d
+    - getty
+      - Login process that manages login sessions
+  - Process Methods:
+    - exec()
+      - Initiates a new program in the same environment in which it is operating.
+      - The parent process never regains control unless there is an exec() error.
+    - fork()
+      - Creates a child process by making an exact duplicate of the parent process.
+      - Both parent and child continue running.
+    - getenv()
+      - Searches the environment variable list for a string that matches the string requested.
+      - Returns a pointer to the value in the environment or null if there is no match.
+    - getpid()
+      - Get Process ID (PID)
+    - getppid()
+      - Get Parent Process ID (PPID)
+    - putenv()
+      - Adds or changes the value of environment variables.
+      - Takes arguments in the form of key=value string.
+      - If the key doesn't exist in the environment then the string is added to the environment.
+      - If the key does exist then the value in the environment is overwritten.
+      - Returns 0 on success or -1 on error.
+    - wait()
+      - Suspends calling process until child has finished.
+      - Returns the PID of the terminated child if OK, -1 if error.
+    - waitpid()
+      - Can wait for a particular child.
+  - Since a child process is a copy of the parent, is has copies of the parent's data.
+    - A change to a variable in the child will not change that variable in the parent.
+  - Zombie Processes
+    - A child process becomes a zombie process if the child exits when the parent isn't currently executing wait()
+    - Status data about the child is stored until the parent does a wait()
+    - The reason the process is a zombie is because it is "dead" but hasn't yet been "reaped" by the parent process.
+  - If a parent exits when 1 or more children are still running, the children are adopted by /etc/init, which can then monitor or kill them.
