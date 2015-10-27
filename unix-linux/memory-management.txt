@@ -1,0 +1,11 @@
+- Linux is a virtual memory system; the addresses seen by user programs do not directly correspond to physical addresses used by the hardware.
+
+- Programs running on the system can allocate more memory than is physically available, such as mapping the program's memory to device memory.
+
+- malloc()
+  - Library function implemented in the standard C library and is not a system call.
+  - Memory allocated is not initialized.
+    - free() frees the memory space pointed to by a previous call to malloc(), calloc(), or realloc().
+  - Memory is obtained from the brk()/sbrk() system call, or anonymous memory via mmap().
+
+- The kernel allocates a virtual memory area for the application but does not allocate physical memory.
