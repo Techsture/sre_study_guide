@@ -1,0 +1,3 @@
+- Media Access Control Address or Physical Address
+- Unique identifier assigned to network interfaces.
+- 48-bit (6 octets)
