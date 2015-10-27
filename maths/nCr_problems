@@ -1,0 +1,15 @@
+- n-Choose-r (n-choose-k, nCk, nCr) Problems
+  - n is the number of things to choose from.
+  - r is the number of things you're choosing.
+  - Combinations
+    - Used when the order doesn't matter.
+    - When repetition is not allowed, the formula is:
+      - n! / r! (n - r)!
+    - When repetition is allowed, the formula is:
+      - (n + r - 1)! / r! (n - 1)!
+  - Permutations
+    - Used when the order matters.
+    - When repetition is allowed, the formula is:
+      - n^r
+    - When repetition is not allowed, the formula is:
+      - n! / (n - r)!
