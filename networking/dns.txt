@@ -1,0 +1,4 @@
+- Domain Name System
+- Naming system for resources connected to Internet or private networks.
+- Translates domain names to IP addresses.
+- A DNS name server stores the DNS records for a domain name and responds with answers to queries against its database.
