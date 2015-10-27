@@ -12,10 +12,6 @@
   - A data structure made up of nodes and edges without having any cycles.
   - The root node can have n children
 
-- Stacks
-  - An ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end (LIFO).
-  - Items come off the stacked in the reversed order of how they were put on ((1, 2, 3) => (3, 2, 1)) such as the "Back" button on a web browser.
-
 - Linked Lists
 
 - Doubly-Linked Lists
