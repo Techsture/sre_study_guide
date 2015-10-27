@@ -1,0 +1,64 @@
+- Big-O Notation
+  - A relative representation of the complexity of an algorithm.
+    - Constant
+      - O(1)
+      - Picking a list element directly
+    - Linear
+      - O(n)
+      - Looking for a value by iterating through a list
+    - Logarithmic
+      - O(log n)
+      - Binary Search Tree (Bisection Search)
+    - Log Linear
+      - O(n log n)
+      - Merge Sort
+      - Heap Sort
+      - Quick Sort
+    - Quadratic
+      - O(n^2)
+      - Bubble Sort
+      - Insertion Sort
+      - Selection Sort
+      - Traversing a two-dimensional array
+    - Cubic
+      - O(n^3)
+    - Exponential
+      - O(2^n)
+
+- O(n log n) sorting algorithms and how they work.
+  - Quick Sort
+    - Pick an element from the array (the pivot)
+    - Reorder the array so that all elements with values less than the pivot come before the pivot and all elements with values larger than the pivot come after it.  Equal values can go either way.
+    - Recursively apply the first two steps to the sub-array of elements with smaller values and separately to the sub-array of elements with larger values.
+  - Merge Sort
+    - Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).
+    - Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining.
+  - Heap Sort
+
+- NP-Complete Problems
+  - NP: Nondeterministic Polynomial Time
+  - No fast solition to the problem is known.  The time required to solve the an NP-Complete problem using any known algorithm increases very quickly as the size of the problem grows.
+
+- Trees
+  - A data structure made up of nodes and edges without having any cycles.
+  - The root node can have n children
+
+- Hash Tables
+  - A collection of items which are stored in such a way as to make them easier to find later.
+  - The goal is to create a hash function that minimizes the number of collisions, is easy to compute, and evenly distributes the items in the hash table.
+  - Collisions can be resolved in a few ways, such as:
+    - Chaining
+      - Allow many items to exist at the same location, but add a linked list to each slot of the hash table that holds all the numbers for that slot.
+    - Linear Probing
+      - If the hash slot has an item in it, increment the position by a fixed amount until you find an empty slot.
+      - To find it again, find the slot it should be in.  If it doesn't exist there, change the position of the pointer until you locate the number.
+
+- Stacks
+  - An ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end (LIFO).
+  - Items come off the stacked in the reversed order of how they were put on ((1, 2, 3) => (3, 2, 1)) such as the "Back" button on a web browser.
+
+- Linked Lists
+
+- Doubly-Linked Lists
+
+- Priority Queues
