@@ -1,4 +1,4 @@
-#- Big-O Notation
+- Big-O Notation
   - A relative representation of the complexity of an algorithm.
     - Constant
       - O(1)
