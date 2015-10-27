@@ -1,0 +1,7 @@
+- Takes another function as the first argument and a collection as the second argument.
+- Returns the result of running the function on every item in the collection.
+  - Example:
+      map(len, ["A", "BB", "CCC"])  # returns [1, 2, 3]
+- To run a map over a function that doesn't exist, use lambda:
+  - Example:
+      map(lambda x: x * x, [0, 1, 2, 3, 4])   # returns [0, 1, 4, 9, 16]
