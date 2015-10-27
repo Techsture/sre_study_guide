@@ -8,10 +8,6 @@
     - Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining.
   - Heap Sort
 
-- Trees
-  - A data structure made up of nodes and edges without having any cycles.
-  - The root node can have n children
-
 - Linked Lists
 
 - Doubly-Linked Lists
