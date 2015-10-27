@@ -1,0 +1,23 @@
+- NTFS
+  - Windows Compatible
+  - 2TB File Size
+  - 256TB Partition Size
+  - Journaling
+  
+- ext3
+  - Standard Linux filesystem
+  - 2TB File Size
+  - 32TB Partition Size
+  - Journaling
+
+- ext4
+  - Best choice for new installations that don't need to be completely standard
+  - 16TB File Size
+  - 1EB Partition Size
+  - Journaling
+
+- XFS
+  - Best choice for a mix of stability and advanced journaling
+  - 8EB File Size
+  - 8EB Partition Size
+  - Journaling with metadata
