@@ -1,0 +1,41 @@
+- All are structured the same way; an IP header followed by a variable-length data field.  Header fields are as follows:
+
+  - Version
+    - Indicates the format of the Internet header.
+
+  - IHL (Internet Header Length)
+    - The length of the Internet header, which points to the beginning of the data.
+
+  - Type of Service
+    - Defines parameters about the desired QoS.
+
+  - Total Length
+    - Length of the datagram, including header and data.
+
+  - Identification
+    - Assigned by the sender to add in assembling the fragments of a datagram.
+
+  - Flags
+    - Various control flags.
+
+  - Fragment Offset
+    - Indicates where in the datagram the fragment belongs.
+
+  - Time To Live (TTL)
+    -  The maximum time the datagram is allowed to remain in the Internet system in seconds.
+
+  - Protocol
+    - Indicates the next level protocol used in the data portion of the datagram.
+
+  - Header Checksum
+    - Checksum for header only.
+    - Since some header fields change, this is verified and recomputed at each point that the header is processed.
+
+  - Source Address
+
+  - Destination Address
+
+  - Options
+
+  - Padding
+    - Used to ensure that the header ends on a 32-bit boundry.
