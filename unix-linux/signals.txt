@@ -1,0 +1,9 @@
+- A limited form of inter-process communication.
+
+- An asynchronous notification sent to a process or a specific thread within the same process.
+
+- Examples:
+	- CTRL+C (SIGINT, Interrupt): Terminate.
+	- CTRL+Z (SIGTSTP): Suspend execution.
+	- CTRL+\ (SIGQUIT): Terminate and dump core.
+	- CTRL+T (SIGINFO): Show information about the running command.
