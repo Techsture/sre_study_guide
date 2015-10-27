@@ -1,0 +1,9 @@
+- append() adds objects to the end of a list.  If you append a list to a list, you get:
+    x = [1, 2, 3]
+    x.append([4, 5])
+    # creates: [1, 2, 3, [4, 5]]
+    
+- extend() adds elements from inside the iterable to the end of the list:
+    x = [1, 2, 3]
+    x.append([4, 5])
+    # creates: [1, 2, 3, 4, 5]
