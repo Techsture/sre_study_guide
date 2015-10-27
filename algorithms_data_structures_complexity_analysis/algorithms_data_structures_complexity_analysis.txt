@@ -12,16 +12,6 @@
   - A data structure made up of nodes and edges without having any cycles.
   - The root node can have n children
 
-- Hash Tables
-  - A collection of items which are stored in such a way as to make them easier to find later.
-  - The goal is to create a hash function that minimizes the number of collisions, is easy to compute, and evenly distributes the items in the hash table.
-  - Collisions can be resolved in a few ways, such as:
-    - Chaining
-      - Allow many items to exist at the same location, but add a linked list to each slot of the hash table that holds all the numbers for that slot.
-    - Linear Probing
-      - If the hash slot has an item in it, increment the position by a fixed amount until you find an empty slot.
-      - To find it again, find the slot it should be in.  If it doesn't exist there, change the position of the pointer until you locate the number.
-
 - Stacks
   - An ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end (LIFO).
   - Items come off the stacked in the reversed order of how they were put on ((1, 2, 3) => (3, 2, 1)) such as the "Back" button on a web browser.
