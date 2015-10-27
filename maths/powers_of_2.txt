@@ -1,0 +1,60 @@
+- 2^8
+  - 256
+  - Total number of values that can be represented by 8 bits.
+  - Byte
+
+- 2^10
+  - 1024
+  - Kilobyte
+
+- 2^16
+  - 65536
+  - The number of distinct values representable in a on a 16-bit processor.
+
+- 2^20
+  - Megabyte
+
+- 2^30
+  - Gigabyte
+
+- 2^31
+  - Maximum number of non-negative values for a signed 32-bit integer.
+  - The number at which Unix Time (Epoch Time) will run out.
+    - 03:14:07 UTC, 19 January, 2038
+
+- 2^32
+  - The number of distinct values representable in a on a 32-bit processor.
+  - The maximum range of a long int in C/C++
+  - The total number of IPv4 addresses.
+
+- 2^40
+  - Terabyte
+
+- 2^50
+  - Petabyte
+
+- 2^60
+  - Exabyte
+
+- 2^64
+  - Total number of IPv6 addresses generally given to a single subnet.
+  - One more than the number of grains of rice on a chessboard (2^64 - 1 is commonly referred to as "The Chess Number")
+
+- 2^70
+  - Yottabyte
+
+- 2^86
+  - Conjectured to be the largest power of two that does not contain a zero.
+
+- 2^96
+  - Total number of addresses given to a local Internet Registry.
+
+- 2^128
+  - Total number of IPv6 addresses.
+  - Total number of distinct UUIDs.
+
+- 2^333
+  - Smallest power of 2 which is greater than a googol (10^100)
+
+- 2^1024
+  - Largest number that can fit into the IEEE double-precision floating-point format.
