@@ -1,0 +1,4 @@
+- Takes a function as the first argument and a collection as the second argument.
+- Returns a value that is created by combining the items.
+  Example:
+      reduce(lambda a, x: a + x, [0, 1, 2, 3, 4])   # returns 10
