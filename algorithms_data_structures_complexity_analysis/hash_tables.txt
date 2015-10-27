@@ -1,5 +1,7 @@
 - A collection of items which are stored in such a way as to make them easier to find later.
+
 - The goal is to create a hash function that minimizes the number of collisions, is easy to compute, and evenly distributes the items in the hash table.
+
 - Collisions can be resolved in a few ways, such as:
   - Chaining
     - Allow many items to exist at the same location, but add a linked list to each slot of the hash table that holds all the numbers for that slot.
