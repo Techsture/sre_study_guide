@@ -1,0 +1,13 @@
+- list[start:end]   # items start through end-1
+
+- list[start:]      # items start through the rest of the list
+
+- list[:end]        # items from the beginning through end-1
+
+- list[:]           # a copy of the whole list
+
+- list[-1]          # last item in the array
+
+- list[-2:]         # last two items in the array
+
+- list[:-2]         # everything except the last two items
