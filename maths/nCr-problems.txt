@@ -1,4 +1,4 @@
-- n-Choose-r (n-choose-k, nCk, nCr) Problems
+- n-Choose-r (or n-choose-k, or nCr, or nCk) Problems
 
   - n is the number of things to choose from.
 
