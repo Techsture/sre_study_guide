@@ -1,0 +1,3 @@
+- tcpdump
+	- tcpdump -i <interface> <protocol> port <portNumber>
+	- tracert <dnsOrIp>
