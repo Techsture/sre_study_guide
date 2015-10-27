@@ -1,0 +1,1 @@
+- A method where the solution to a problem depends on the solutions to smaller instances of the same problem.
