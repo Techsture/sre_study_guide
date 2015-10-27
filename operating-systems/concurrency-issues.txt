@@ -1,0 +1,7 @@
+- Race Conditions
+  - Happens when multiple instances interleave processes instead of running them in the as-expected sequence.
+  - Critical Region:
+    - Piece of code containing the concurrency issue.
+  - Solution:
+    - Recognize when simultaneous accesses occur.
+    - Use locks to make sure only one instance can enter the critical region at any time.
