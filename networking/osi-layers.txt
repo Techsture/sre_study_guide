@@ -1,0 +1,36 @@
+- Mnemonic: Please Do Not Throw Sausage Pizza Away
+- 1: Physical
+  - Transmission and reception of raw bit streams over a physical medium.
+    - Ethernet
+    - DSL
+    - USB
+    - DOCSIS
+- 2: Data Link
+  - Reliable transmission of data frames between two nodes connected by a physical layer.
+    - LLDP
+    - PPP
+    - IEEE 802.2
+- 3: Network
+  - Structuring and managing a multi-node network, including addressing, routing, and traffic control.
+    - IPv4
+    - IPv6
+    - ICMP
+- 4: Transport
+  - Reliable transmission of data segments between points on a network.
+    - TCP
+    - UDP
+- 5: Session
+  - Managing exchange of information in the form of multiple transmissions back and forth between two.
+    - SSL
+    - SQL
+- 6: Presentation
+  - Translation of data between a networking service and application, including character encoding, data compression, and encryption/decryption.
+    - HTML
+    - CSS
+    - GIF
+- 7: Application
+  - High-level APIs, including resource sharing, remote file access, directory services, and virtual terminals.
+    - HTTP
+    - FTP
+    - Telnet
+    - SSH
