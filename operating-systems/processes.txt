@@ -1,4 +1,5 @@
 - A process is an executing program
+
 - Made up of:
   - Program Code
   - Machine Registers
@@ -28,6 +29,7 @@
       - Dynamically allocated
     - Execution Priority
     - Signal Information
+
 - Important File System Processes
   - init
     - Started at boot time
@@ -35,6 +37,7 @@
     - Uses file inittab & directories /etc/rc?.d
   - getty
     - Login process that manages login sessions
+
 - Process Methods:
   - exec()
     - Initiates a new program in the same environment in which it is operating.
@@ -60,10 +63,13 @@
     - Returns the PID of the terminated child if OK, -1 if error.
   - waitpid()
     - Can wait for a particular child.
+
 - Since a child process is a copy of the parent, is has copies of the parent's data.
   - A change to a variable in the child will not change that variable in the parent.
+
 - Zombie Processes
   - A child process becomes a zombie process if the child exits when the parent isn't currently executing wait()
   - Status data about the child is stored until the parent does a wait()
   - The reason the process is a zombie is because it is "dead" but hasn't yet been "reaped" by the parent process.
+
 - If a parent exits when 1 or more children are still running, the children are adopted by /etc/init, which can then monitor or kill them.
