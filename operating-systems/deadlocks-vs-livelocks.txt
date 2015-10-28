@@ -1,6 +1,8 @@
 - Deadlocks
-  - Condition when two or more processes are waiting for another to release a resource, or more than two process are waiting for resources in a circular chain.
-  - Conditions necessary for a deadlock to occur (all conditions must be true for a deadlock to occur (The Coffman Conditions)):
+  - Condition when two or more processes are waiting for another to release a resource, or more than two process
+    are waiting for resources in a circular chain.
+  - Conditions necessary for a deadlock to occur (all conditions must be true for a deadlock to occur (The Coffman
+    Conditions)):
     - Mutual Exclusion
       - A resource cannot be used by more than one process at a time.
       - Prevention:
@@ -9,20 +11,24 @@
       - Processes already holding resources may request new resources.
       - Prevention:
         - Require processes to request all the resources they need before starting.
-        - Require processes to release all resources before requesting all resources they will need (Serializing Tokens, All-Or-None algorithms).
+        - Require processes to release all resources before requesting all resources they will need (Serializing
+          Tokens, All-Or-None algorithms).
     - No Preemption
       - Only a process holding a resource may release it.
       - Prevention:
         - Inability to enforce preemption may interfere with a priority algorithm.
         - Lock-free & wait-free algorithms.
     - Circular Wait
-      - Two or more processes form a circular chain where each process waits for a resource that the next process in the chain holds.
+      - Two or more processes form a circular chain where each process waits for a resource that the next process
+        in the chain holds.
       - Prevention:
         - Disable interrupts during critical sections.
         - Use a heirarchy to determine a partial ordering of resources.
 - Livelocks
   - Special case of resource starvation:
     - The processes involved constantly change with regard to one another.
-  - Analogous to two people trying to pass each other in a narrow hallway, both trying to step out of the others way, but both going in the same direction.
-  - A risk with some algorithms that try to detect and recover from deadlocks; if more than one process takes action, the deadlock detection algorithms can trigger repeatedly.
+  - Analogous to two people trying to pass each other in a narrow hallway, both trying to step out of the others
+    way, but both going in the same direction.
+  - A risk with some algorithms that try to detect and recover from deadlocks; if more than one process takes
+    action, the deadlock detection algorithms can trigger repeatedly.
     - Can be avoided by ensuring that only one process (chose randomly or by priority) takes the recovery action.
