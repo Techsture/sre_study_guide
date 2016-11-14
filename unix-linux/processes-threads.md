@@ -22,3 +22,24 @@
   - When the process completes its execution, it calls a routine named `_exit` to notify kernel that it is ready to die. it also supplies with a exit code `0 - success, non-0 errror`
   - Before the process can be allowed to die completely, the kernel requires the parent process to acknowledge the death of the child process. The parent process does this by calling `wait`. The parent receives the exit code of the child process and can request for summary of childs resources.
   - If the parent process dies before the child process, the the init will accept the orphaned child process and call `wait`
+
+### Singnals
+  singnals are similar to exceptions in python. if a process has implemented an handler correspdonding to the singal interrupt then it is called if not the kernel can take action on behalf of the process
+  #### Some important signals
+  Number | Name |  Description
+  --- |--- | ---- |  
+  1 | HUP | Handup  
+  2 | INT | Interrupt
+  3 | QUIT | QUIT
+  9 | KILL | KILL
+  11 | SEGV | Segnmentation fault
+  15 | TERM | software termination
+
+  #### Some Common Interrupts
+  - KILL: kill is unblockable and terminates the process at kernel level, the process never receives this signals
+  - INT: int is sent by the terminal when you press CRTL+C, if caught in the process then it should clean up and allow themself to be killed
+  - TERM: is a request to terminated completely. The process should clean up and exit
+  - HUP:
+    - HUP could be signal to reread configuration/files by the deamon
+    - terminal driver instructs to clean up the process (hangup)
+  - QUIT: quit is similar to TERM, it defaults to produde core dump if not caught
