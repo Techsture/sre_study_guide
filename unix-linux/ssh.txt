@@ -1,0 +1,19 @@
+# SSH Connection Setup and Data Transfer
+
+- Client opens a TCP connection (3-way handshake is done)
+    - Client sends SYN packet
+    - Server sends SYN-ACK packet 
+    - Client responds with ACK packet
+
+- Server sends its OpenSSH version and public key
+
+- Client checks its supported SSH version and confirms the public key
+    - User might get prompted to accept the key if its not present in ~/.ssh/known_hosts file
+    - Continue if the protcol matches and client accepts the key
+
+- SSH2_MSG_KEXINIT message is sent/received (KEX algorithm negotiation)
+    - Client sends its KEX algorithms, host key algorithms, ciphers
+    - First match of algorithms on clients side is selected for the session
+    - KEX Algorithm: Variant of Diffie-Hellman algorithms
+    - Host key Algorithm: Public key crypto algorithm 
+    - Cipher: cacha-poly1305 > aes256-gcm > aes128-gcm etc   
