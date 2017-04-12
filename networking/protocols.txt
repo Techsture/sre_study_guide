@@ -1,19 +1,19 @@
 - TCP/IP
-	- Transmission Control Protocol/Internet Protocol
-	- Specifies how data should be packetized, addressed, transmitted, routed, and received at the destination.
-	- Organized into four abstraction layers:
-		- Link
-			- Used to move packets between the Internet layer of two different hosts on the same link.
-		- Internet
-			- Sends packets of data (datagrams) across potentially multiple networks.
-		- Transport
-			- End-to-end message transmission independent of the underlying network.
-			- Responsible for error control, segmentation, flow control, congestion control, and application addressing (port numbers).
-		- Application
-			- HTTP, FTP, SMTP, DHCP, DNS, etc.
-			- Distinguishes between user and support protocols. Examples are:
-				- User Protocol: FTP
-				- System Protocol: DNS
+  - Transmission Control Protocol/Internet Protocol
+  - Specifies how data should be packetized, addressed, transmitted, routed, and received at the destination.
+  - Organized into four abstraction layers:
+    - Link
+      - Used to move packets between the Internet layer of two different hosts on the same link.
+    - Internet
+      - Sends packets of data (datagrams) across potentially multiple networks.
+    - Transport
+      - End-to-end message transmission independent of the underlying network.
+      - Responsible for error control, segmentation, flow control, congestion control, and application addressing (port numbers).
+    - Application
+      - HTTP, FTP, SMTP, DHCP, DNS, etc.
+      - Distinguishes between user and support protocols. Examples are:
+        - User Protocol: FTP
+	- System Protocol: DNS
   - Benefits over UDP:
     - Reliable
       - TCP managers message acknowledgement, retransmission, and timeout.
@@ -61,11 +61,11 @@
         - The acknowledgement number is set to one more than the received sequence (B+1).
 
 - UDP
-	- User Datagram Protocol
-	- Connectionless transmission model with a minimum of protocol mechanism.
-		- No handshaking which exposes programs using UDP to any unreliability of the underlying network protocol.
-	- No guarantee of delivery, ordering, or duplication protection.
-	- Provides checksums for data integrity and port numbers for addressing different functions at the source and destination of the datagram.
+  - User Datagram Protocol
+  - Connectionless transmission model with a minimum of protocol mechanism.
+    - No handshaking which exposes programs using UDP to any unreliability of the underlying network protocol.
+    - No guarantee of delivery, ordering, or duplication protection.
+    - Provides checksums for data integrity and port numbers for addressing different functions at the source and destination of the datagram.
   - Packet Structure:
     - Source Port
     - Destination Port
