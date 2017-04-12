@@ -1,6 +1,8 @@
+# Processes (Operating Systems)
+
 - A process is an executing program
 
-- Made up of:
+- Processes are made up of:
   - Program Code
   - Machine Registers
   - Global Data

@@ -1,3 +1,5 @@
+# DNS (Networking)
+
 - Domain Name System
 - Naming system for resources connected to Internet or private networks.
 - Translates domain names to IP addresses.

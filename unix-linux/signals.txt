@@ -1,4 +1,4 @@
-# Signals
+# Signals (UNIX/Linux)
 
 - A limited form of inter-process communication.
 

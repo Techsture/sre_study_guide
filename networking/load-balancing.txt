@@ -1,4 +1,7 @@
+# Load Balancing (Networking)
+
 - Distributes workloads across multiple computing resources.
+
 - Algorithm examples:
   - Random
   - Round Robin

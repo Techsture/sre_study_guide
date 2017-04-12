@@ -1,3 +1,5 @@
+# Map (Python)
+
 - Takes another function as the first argument and a collection as the second argument.
 - Returns the result of running the function on every item in the collection.
   - Example:

@@ -1,3 +1,5 @@
+# Append vs. Extend (Python)
+
 - append() adds objects to the end of a list.  If you append a list to a list, you get:
     x = [1, 2, 3]
     x.append([4, 5])

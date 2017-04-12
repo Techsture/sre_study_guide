@@ -1,3 +1,5 @@
+# Slices (Python)
+
 - list[start:end]   # items start through end-1
 
 - list[start:]      # items start through the rest of the list

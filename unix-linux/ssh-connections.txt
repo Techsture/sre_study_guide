@@ -1,4 +1,4 @@
-# SSH Connection Setup and Data Transfer
+# SSH Connections (UNIX/Linux)
 
 - Client opens a TCP connection (3-way handshake is done)
     - Client sends SYN packet

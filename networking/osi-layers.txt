@@ -1,3 +1,5 @@
+# OSI Layers (Networking)
+
 - Mnemonic: Please Do Not Throw Sausage Pizza Away
 - 1: Physical
   - Transmission and reception of raw bit streams over a physical medium.

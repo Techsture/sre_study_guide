@@ -1,3 +1,5 @@
+# Reduce (Python)
+
 - Takes a function as the first argument and a collection as the second argument.
 - Returns a value that is created by combining the items.
   Example:

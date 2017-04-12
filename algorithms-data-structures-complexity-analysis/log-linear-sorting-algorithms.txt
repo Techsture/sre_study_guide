@@ -1,3 +1,5 @@
+# Log Linear Sorting Algorithms (Algorithms)
+
 - Quick Sort
   - Pick an element from the array (the pivot)
   - Reorder the array so that all elements with values less than the pivot come before the pivot and all elements with values larger than the pivot come after it.  Equal values can go either way.

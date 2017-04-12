@@ -1,3 +1,5 @@
+# Inodes (UNIX/Linux)
+
 - In Unix file systems, files are indexed by an integer number, called the "i-number" or "inode number".
   - Print this with the -i option of ls
 

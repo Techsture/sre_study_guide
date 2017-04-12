@@ -1,3 +1,5 @@
+# Powers of 2 (Maths)
+
 - 2^8
   - 256
   - Total number of values that can be represented by 8 bits.

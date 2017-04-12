@@ -1,14 +1,20 @@
-- The kernel sees no distiction between process and threads; everything is simply a runnable task.
+# Threads (Operating Systems)
+
+- The kernel sees no distiction between processes and threads; everything is simply a runnable task.
   - Each process has a separate stack, text, data, and heap.
   - Threads have their own stack, but share text, data, and heap with the process.
+
 - Threads are called "Light Weight Processes" (LWP) at kernel level, and threads at user level.
+
 - When a thread is created, it's assigned a Thread ID.
   - Unlike a PID (which is unique across the system), a thread ID is unique only in the context of a single process.
   - Thread IDs are not necessarily integers; they could be structures.
   - Not easy to print, like a PID.
+
 - Two interfaces to create threads:
   - clone()
     - Low level system call.
   - pthread_create()
     - Higher level interface.
+
 - Linux threading is 1:1 (not 1:N or M:N).

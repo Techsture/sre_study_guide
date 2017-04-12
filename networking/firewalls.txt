@@ -1,2 +1,4 @@
+# Firewalls (Networking)
+
 - Network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
 - Categorized as network or host-based.

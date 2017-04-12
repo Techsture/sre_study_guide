@@ -1,3 +1,5 @@
+# Hash Tables (Data Structures)
+
 - A collection of items which are stored in such a way as to make them easier to find later.
 
 - The goal is to create a hash function that minimizes the number of collisions, is easy to compute, and evenly distributes the items in the hash table.

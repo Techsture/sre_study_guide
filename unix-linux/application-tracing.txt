@@ -1,2 +1,4 @@
+# Application Tracing (UNIX/Linux)
+
 - strace command:
 	- strace -p <PID> -s <stringSize> -o <outputFile>

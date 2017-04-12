@@ -1,3 +1,5 @@
+# Deadlocks vs. Livelocks (Operating Systems)
+
 - Deadlocks
   - Condition when two or more processes are waiting for another to release a resource, or more than two process
     are waiting for resources in a circular chain.

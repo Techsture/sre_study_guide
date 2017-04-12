@@ -1,8 +1,10 @@
+# Monitors (Operating Systems)
+
 - Sychronization construct that allows threads to have both mutual exclusion and the ability to wait (block) for a
   certain condition to become true.
 
 - Typically consists of a mutex (lock) and condition variables.
   - A condition variable is basically a container of threads that are waiting on a certain condition.
 
-- Provide a mechanism for threads to temporarily give up exclusive access in order to wait for some condition to be
+- Provides a mechanism for threads to temporarily give up exclusive access in order to wait for some condition to be
   met, before regaining exclusive access and resuming their task.

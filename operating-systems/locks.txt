@@ -1,3 +1,5 @@
+# Locks (Operating Systems)
+
 - Two main types of kernel locks:
   - Spinlocks
     - If you cant get the spinlock, you keep trying (spinning) until you can.

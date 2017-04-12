@@ -1,2 +1,4 @@
+# Trees (Data Structures)
+
 - A data structure made up of nodes and edges without having any cycles.
 - The root node can have n children
