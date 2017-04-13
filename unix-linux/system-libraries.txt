@@ -1,3 +1,13 @@
 # System Libraries (UNIX/Linux)
 
-- System libraries are special functions or programs using which application programs or system utilities accesses Kernel's features. These libraries implements most of the functionalities of the operating system and do not requires kernel module's code access rights.
+- System libraries are special functions or programs using which application programs or system utilities accesses Kernel's features. 
+  These libraries implement most of the functionalities of the operating system and do not require kernel module code access rights.
+
+- To find the system libraries that a binary file needs, use the command 'ldd':
+  - NAME
+       ldd - print shared library dependencies
+    SYNOPSIS
+       ldd [OPTION]...  FILE...
+    DESCRIPTION
+       ldd  prints  the  shared  libraries  required by each program or shared
+       library specified on the command line.
