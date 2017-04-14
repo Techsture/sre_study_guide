@@ -6,8 +6,6 @@
 - To find the system libraries that a binary file needs, use the command 'ldd':
   - NAME
        ldd - print shared library dependencies
-    SYNOPSIS
-       ldd [OPTION]...  FILE...
     DESCRIPTION
        ldd  prints  the  shared  libraries  required by each program or shared
        library specified on the command line.

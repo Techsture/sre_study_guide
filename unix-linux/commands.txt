@@ -1,0 +1,41 @@
+# Commands (UNIX/Linux)
+# A list of commands that are useful but not always used every day
+# (aka: stuff you may get asked about during an interview)
+
+- adduser (or useradd)
+    - Add a user to the system
+
+- chmod
+    - Change the mode (permissions) of a file
+
+- chown
+    - Change the owner and group of a file
+
+- dd
+    - Copy data across files, devices, or partitions.
+    - Data can be converted during the copying process
+
+- ldd
+    - Print the shared libraries required by each program specified on the command line.
+
+- ln
+    - Create a link to a file
+        - Links can be "hard" link or "soft/symbolic" links (symlinks)
+            - Hard links point directly to the inode for a file (usually doesn't work with directories).
+            - Symlinks point to the filename (or directory name), not the underlying inode.
+
+- swapon
+    - Turn on utilization of swap space
+    - The '-s' parameter will verify that swap is in use
+
+- swapoff
+    - Turn off utilization of swap space
+
+- uname
+    - Print system info such as:
+        - Kernel name, release, and version
+        - Node name
+        - Processor
+        - Hardware Platform
+        - Operating System
+
