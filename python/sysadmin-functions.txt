@@ -35,3 +35,11 @@
             - Get system information
         - os.walk()
             - Get the current directory and all its subdirectories and files
+
+- The Subprocess module
+    - import subprocess
+        - subprocess.call()
+            - Issue a system command
+        - subprocess.check_output()
+            - Issue a system command and allow the output to be written to a variable
+            - Allows for processing the output
