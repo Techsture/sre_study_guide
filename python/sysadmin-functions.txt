@@ -1,0 +1,37 @@
+# Systems Administration Functions
+# This document highlights some Python functions that you might find useful for systems administration tasks.
+
+- The OS module
+    - import os
+        - os.access()
+            - Check file accessibility
+        - os.chdir()
+            - Change current working directory
+        - os.environ()
+            - Get environment variable details
+        - os.getcwd()
+            - Get current working directory
+        - os.getgid()
+            - Return Group ID of the current process
+        - os.getloadavg()
+            - Get system load average
+        - os.getlogin()
+            - Get currently logged in user
+        - os.getpid()
+            - Return the Process ID of the current process
+        - os.getuid()
+            - Return User ID of the current process
+        - os.listdir()
+            - Get all files and directories in a path
+        - os.path.exists()
+            - Check if a path exists
+        - os.path.getsize()
+            - Get the size of a file
+        - os.stat()
+            - Get the status of a file
+        - os.system()
+            - Execute a shell command
+        - os.uname()
+            - Get system information
+        - os.walk()
+            - Get the current directory and all its subdirectories and files
