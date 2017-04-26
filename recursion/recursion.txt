@@ -2,4 +2,12 @@
 
 - A method where the solution to a problem depends on the solutions to smaller instances of the same problem.
 
-# TODO: Add examples.
+Example:
+- This example calls it self until all of the elements in the list have been accounted for.
+def sum(list):
+    if len(list) == 1:
+        return list[0]
+    else:
+        return list[0] + sum(list[1:])
+
+print(sum([5,7,3,8,10]))
