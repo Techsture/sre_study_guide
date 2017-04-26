@@ -9,3 +9,30 @@
   - CTRL+Z (SIGTSTP): Suspend execution.
   - CTRL+\ (SIGQUIT): Terminate and dump core.
   - CTRL+T (SIGINFO): Show information about the running command.
+
+- Important Note: KILL and STOP cannot be caught, blocked, or ignored.
+- Some important signals:
+  - Number | Name | Description
+    ------ | ---- | -----------
+         1 | HUP  | Hang-Up
+         2 | INT  | Interrupt
+         3 | QUIT | QUIT
+         9 | KILL | KILL
+        11 | SEGV | Segmentation Fault
+        15 | TERM | Software Termination (This is the default sent by the 'kill' command in Linux)
+        17 | STOP | Stop
+        19 | STOP | Stop
+        23 | STOP | Stop
+
+- Some Common Interrupts
+  - KILL
+    - Kill is unblockable and terminates the process at the kernel level.  The process never receives this signal.
+  - INT
+    - Signal sent by the terminal when you press CRTL+C.  If caught in by process, it should clean up and then allow itself to terminate.
+  - TERM
+    - Request to terminate completely.  The process should clean up and exit.  This is the default signal sent by the 'kill' command.
+  - HUP
+    - Often used as a signal the process to reread its configuration files.
+    - Terminal driver instructs to clean up the process (hangup).
+  - QUIT
+    - Similar to TERM, it defaults to producing a core dump if not caught by the process.

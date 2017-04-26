@@ -27,6 +27,7 @@
 
 - Signals
   - Signals are similar to exceptions in Python. If a process has implemented a handler correspdonding to the signal interrupt, then it is called. If not, the kernel can take action on behalf of the process.
+  - Important Note: KILL and STOP cannot be caught, blocked, or ignored.
   - Some important signals:
     - Number | Name | Description
       ------ | ---- | -----------  
@@ -36,6 +37,9 @@
            9 | KILL | KILL
           11 | SEGV | Segmentation Fault
           15 | TERM | Software Termination (This is the default sent by the 'kill' command in Linux)
+          17 | STOP | Stop           
+          19 | STOP | Stop           
+          23 | STOP | Stop           
 
 - Some Common Interrupts
   - KILL
