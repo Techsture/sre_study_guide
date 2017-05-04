@@ -103,6 +103,14 @@
       - Same as previous (route all requests for 8.8.8.* through gateway 192.168.10.1), but uses 
         netmask instead of CIDR notation
 
+- tcpdump
+  - Displays a stream detailing TCP packet information being received or transmitted from an interface
+  - Examples: 
+    - tcpdump -i eth0 -vv
+      - Dump all the traffic for eth0 in extra verbose mode
+    - tcpdump -i eth0 -vv -w dumpster.pcap
+      - Dump all traffic for device eth0 in extra verbose mode to a wireshark-compatible file called dumpster.pcap
+
 - traceroute
   - Show all the hops between client and server
   - Example: traceroute google.com
