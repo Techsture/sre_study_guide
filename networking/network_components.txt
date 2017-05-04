@@ -1,0 +1,44 @@
+# Network Components
+
+- DNS (Networking)
+    - Domain Name System
+    - Naming system for resources connected to Internet or private networks.
+    - Translates domain names to IP addresses.
+    - A DNS name server stores the DNS records for a domain name and responds with answers to queries 
+        against its database.
+
+- Firewalls
+    - Network security system that monitors and controls incoming and outgoing network traffic
+        based on predetermined security rules.
+    - Categorized as network or host-based.
+
+- Load Balancers
+    - Distributes workloads across multiple computing resources using a preconfigured algorithm
+    - Algorithm Examples:
+      - Random
+      - Round Robin
+        - Just goes around in a loop
+      - Weighted Round Robin
+        - Same as round robin, except some servers get a larger share of the overall traffic.
+      - Source IP
+        - Connections are distributed to the backend servers based on a hash of the source IP address.
+        - As long as all servers are running, a give client IP address will always go to the same web server.
+      - URL
+        - Connections are distributed to the backend servers based on a hash of the URL request.
+        - Useful when balancing in front of caches since requests for a given object will always go to just one backend cache, avoiding cache duplication.
+      - Least Connections
+        - Load balancer monitors the number of open connections for each server and sends to the least busy of them.
+      - Least Traffic
+        - Load balancer monitors the bitrate from each server and sends to the one with the least amount of outgoing traffic.
+      - Least Latency
+        - A simple request is made to each server and the load is sent to the first responder.
+
+- MAC Addresses
+    - Media Access Control Address or Physical Address
+    - Unique identifier assigned to network interfaces.
+    - 48-bit (6 octets)
+
+- Routers
+    - Forwards data packets between computer networks.
+    - Perform the "traffic directing" functions of Internet.
+

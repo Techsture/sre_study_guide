@@ -1,5 +1,0 @@
-# Network Theory (Networking)
-
-- The study of complex interacting systems.
-- Can be represented as graphs (vertices connected by edges).
-- Used to find the optimal way of doing something (combinatorial optimization).
