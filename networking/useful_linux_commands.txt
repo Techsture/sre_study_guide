@@ -1,10 +1,30 @@
 # Useful Linux Networking Commands
 
+- arp
+  - Display and update ARP cache
+  - Examples:
+    - arp
+      - Shows the ARP cache
+    - arp -a
+      - Show ARP cache with extra information (IP address, MAC address, etc.)
+    - arp -d 64:a5:c3:62:f8:e1
+      - Delete address from ARP cache with MAC 64:a5:c3:62:f8:e1
+
 - dig
   - Domain information utility; find information about a specific address, such as CNAME, A Record, etc.
   - Example: dig www.google.com
     - Get DNS information related to www.google.com.  Note this will return different information than just "dig google.com", because it 
       goes one level deeper into Google's nameservers.
+
+- host
+  - DNS lookup; IP to name or vice versa
+  - Examples:
+    - host 8.8.8.8
+      - Returns domain name pointer for 8.8.8.8
+    - host google.com
+      - Returns IP address for google.com
+    - host -t MX google.com
+      - Returns MX (mail server) records for google.com
 
 - ifconfig
   - Network interface configuration utility
@@ -13,6 +33,10 @@
   - Examples:
     - ifconfig
       - Simply displays current configuration of the network interfaces
+    - ifconfig eth0 mtu 1500
+      - Set MTU size for eth0 interface to 1500
+    - ifconfig eth0 192.168.1.64
+      - Set eth0 address to 192.168.1.64
 
 - ifdown [interface_name]
   - Disable a network interface
@@ -71,7 +95,13 @@
   - Examples:
     - route -n
       - Show routing table using numerical IP addresses
-    - route 
+    - route add default gw 192.168.10.1
+      - Set the default gateway to 192.168.10.1
+    - route add -net 8.8.8.0/24 gw 192.168.10.1
+      - Route all requests for 8.8.8.* through the gateway at 192.168.10.1
+    - route add -net 8.8.8.0 netmask 255.255.255.0 gw 192.168.10.1
+      - Same as previous (route all requests for 8.8.8.* through gateway 192.168.10.1), but uses 
+        netmask instead of CIDR notation
 
 - traceroute
   - Show all the hops between client and server
