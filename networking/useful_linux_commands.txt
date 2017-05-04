@@ -1,0 +1,78 @@
+# Useful Linux Networking Commands
+
+- dig
+  - Domain information utility; find information about a specific address, such as CNAME, A Record, etc.
+  - Example: dig www.google.com
+    - Get DNS information related to www.google.com.  Note this will return different information than just "dig google.com", because it 
+      goes one level deeper into Google's nameservers.
+
+- ifconfig
+  - Network interface configuration utility
+  - Any changes made using this command will not persist after a reboot.
+    - Persistent changes should be made to files in /etc/sysconfig/network-scripts/ (RHEL-based systems)
+  - Examples:
+    - ifconfig
+      - Simply displays current configuration of the network interfaces
+
+- ifdown [interface_name]
+  - Disable a network interface
+  - Example: ifdown eth0
+    - Enable eth0 interface
+
+- ifup [interface_name]
+  - Enable a network interface
+  - Example: ifup eth0
+    - Disable eth0 interface
+
+- netstat
+  - Display currently open Internet connections and UNIX sockets
+  - Examples:
+    - netstat -g
+      - Show interface group memberships
+    - netstat -i
+      -  Show interface transaction counts
+    - netstat -r
+      - Show Kernel routing table
+    - netstat -s
+      -  Show statistics
+    - The following can be mixed together to parse the information easier
+      - netstat -a
+        - Show all open connections and sockets, including those in a LISTEN state
+        - Useful if you're running a server, to make sure the proper ports are open
+      - netstat -c
+        -  Continuously call netstat.  
+        - Can be coupled with "watch" or piped to "grep" so you can find system changes easier:
+          - watch netstat -clau
+      - netstat -l
+        - Show all connections currently in a LISTEN/LISTENING state
+      - netstat -p
+        - Show all connections with process list
+      - netstat -t
+        - Show all open TCP connections and sockets
+      - netstat -u
+        -  Show all open UDP connections and sockets
+      
+- nslookup
+  - Show nameserver information for remote system
+  - Similar to "dig"
+  - Example: nslookup google.com
+    - Shows nameserver information for google.com
+
+- ping
+  - Test connectivity between client and server
+  - Uses ICMP
+  - Example: ping 8.8.8.8
+    - Pings 8.8.8.8 indefinitely (CTRL+C to stop)
+  - Example: ping -c 5 www.google.com
+    - Pings www.google.com 5 times and stops
+
+- route
+  - Show and change routing table
+  - Examples:
+    - route -n
+      - Show routing table using numerical IP addresses
+    - route 
+
+- traceroute
+  - Show all the hops between client and server
+  - Example: traceroute google.com
