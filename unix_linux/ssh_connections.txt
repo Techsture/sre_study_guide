@@ -9,11 +9,11 @@
 
 - Client checks its supported SSH version and confirms the public key
     - User might get prompted to accept the key if its not present in ~/.ssh/known_hosts file
-    - Continue if the protcol matches and client accepts the key
+    - Continue if the protocol matches and client accepts the key
 
 - SSH2_MSG_KEXINIT message is sent/received (KEX algorithm negotiation)
     - Client sends its KEX algorithms, host key algorithms, ciphers
+        - KEX Algorithm: Variant of Diffie-Hellman algorithms
+        - Host key Algorithm: Public key crypto algorithm
+        - Cipher: cacha-poly1305 > aes256-gcm > aes128-gcm etc
     - First match of algorithms on clients side is selected for the session
-    - KEX Algorithm: Variant of Diffie-Hellman algorithms
-    - Host key Algorithm: Public key crypto algorithm 
-    - Cipher: cacha-poly1305 > aes256-gcm > aes128-gcm etc   
