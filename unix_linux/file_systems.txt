@@ -1,25 +1,32 @@
 # File Systems (UNIX/Linux)
 
-- NTFS
-  - Windows Compatible
-  - 2TB File Size
-  - 256TB Partition Size
-  - Journaling
-  
-- ext3
-  - Standard Linux filesystem
-  - 2TB File Size
-  - 32TB Partition Size
-  - Journaling
+- Common File System Types
+  - NTFS
+    - Windows Compatible
+    - 2TB File Size
+    - 256TB Partition Size
+    - Journaling
+  - ext3
+    - Standard Linux filesystem
+    - 2TB File Size
+    - 32TB Partition Size
+    - Journaling
+  - ext4
+    - Best choice for new installations that don't need to be completely standard
+    - 16TB File Size
+    - 1EB Partition Size
+    - Journaling
+  - XFS
+    - Best choice for a mix of stability and advanced journaling
+    - 8EB File Size
+    - 8EB Partition Size
+    - Journaling with metadata
 
-- ext4
-  - Best choice for new installations that don't need to be completely standard
-  - 16TB File Size
-  - 1EB Partition Size
-  - Journaling
+- Journaling
+  - A journaling file system is a file system that keeps track of changes not yet committed to the file system's main part by recording
+    the intentions of such changes in a data structure known as a "journal", which is usually a circular log.
+  - After a crash, recovery involves reading the journal from the file system and replaying changes from this journal until the file
+    system is consistent again.
+    - The changes are "atomic" in that they either succeed or are not replayed at all (skipped because they had not yet been completely
+      written to the journal before the crash occurred).
 
-- XFS
-  - Best choice for a mix of stability and advanced journaling
-  - 8EB File Size
-  - 8EB Partition Size
-  - Journaling with metadata

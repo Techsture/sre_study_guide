@@ -1,10 +1,18 @@
 # Kernel (UNIX/Linux)
 
-- The kernel is a computer program that manages I/O requests from software, and translates them into data processing instructions for the central processing unit and other electronic components of a computer.
+- The kernel is a computer program that manages I/O requests from software, and translates them into data processing instructions for the 
+  central processing unit and other electronic components of a computer.
 
-- The core part of Linux. It is responsible for all major activities of this operating system. It is consists of various modules and it interacts directly with the underlying hardware. Kernel provides the required abstraction to hide low level hardware details to system or application programs.
+- The core part of Linux. It is responsible for all major activities of this operating system. 
+  - Consists of various modules and interacts directly with hardware. 
+  - Kernel provides the required abstraction to hide low level hardware details from system or application programs.
 
-- The critical code of the kernel is usually loaded into a protected area of memory, which prevents it from being overwritten by other, less frequently used parts of the operating system or by applications. The kernel performs its tasks, such as executing processes and handling interrupts, in kernel space, whereas everything a user normally does, such as writing text in a text editor or running programs in a GUI (graphical user interface), is done in user space.
+- The critical code of the kernel is usually loaded into a protected area of memory, which prevents it from being overwritten by other
+  applications. 
+
+- The kernel performs its tasks, such as executing processes and handling interrupts, in kernel space.
+
+- Everything a user normally does, such as writing text in a text editor or running programs in a GUI, is done in user space.
 
 - Processes running in user space have normal privileges.
 
