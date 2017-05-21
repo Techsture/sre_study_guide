@@ -1,4 +1,11 @@
 # Application Tracing (UNIX/Linux)
 
 - strace command:
-	- strace -p <PID> -s <stringSize> -o <outputFile>
+  - Typical example:
+    - strace -p <PID> -s <stringSize> -o <outputFile>
+  - Tracing only specific system calls (for example, `open` and `access`):
+    - strace -e open,access -p <PID>
+  - If the process typically calls fork(), you'll need to use the -f switch (i.e. `strace -f <binary_location>`), otherwise 
+    you won't get the intended output.
+    - An example of a process where you need to strace it's forked process would be `ssh`.  When you call `ssh`
+      it forks to a child process that actually runs the command.

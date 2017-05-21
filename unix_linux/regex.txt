@@ -1,3 +1,73 @@
 # Regex
 
-TODO: Regex
+- Great website to practice Regex: https://regexone.com/
+
+- Regex metacharacters:
+  - . (dot or period) 
+    - Matches any single character.
+  - * (asterisk or star)
+    - Matches any number of the preceding character (0 or more).
+    - Example: r*
+      - Matches r, rr, rrr, rrrr, etc.
+    - Example: .*
+      - Matches any character or characters (a, ab, 123, a1b2c3, etc).  The default wildcard.
+  - ^ (caret)
+    - Matches the beginning of a line.
+  - $ (dollar sign)
+    - Matches the end of a line.
+  - + (plus)
+    - Matches 1 or more of the preceding character.
+    - Example: rr+
+      - Matches "Farr", "arrr", or "brrrrrr", but not "car".
+  - [] (brackets)
+    - Matches specific characters.
+    - Example: [bf]an
+      - Will match "ban" and "fan", but not "can".
+  - [^] (backets with caret)
+    - Excludes a character or pattern.
+    - Example: [^b]og
+      - Matches "dog" or "hog", but not "bog".
+  - [-] (brackets with hyphen or dash)
+    - Matches a range. 
+    - Example: [A-Z]
+      - Match all capital letters.  
+    - Example: [2-7] 
+      - Match 2, 3, 4, 5, 6, or 7.
+  - {} (braces or curly braces)
+    - Example: z{2}
+      - Matches "zz" but not "z" or "zzz".
+    - Example: z{2,3}
+      - Matches "zz" or "zzz" but not "z" or "zzzz".
+  - \ (backslash)
+    - Pair it with a metacharacter to escape that character.
+    - Example: \.\*
+      - Matches the text string .* ("dot star").  Without escaping it would match any character since this is the wildcard!
+  - \s (backslash ess)
+    - Matches whitespace, such as spaces, tabs, newlines, and carriage returns.
+  - () (parentheses or parens)
+    - Match group of characters
+    - Example: ^(resume.+)\.pdf$
+      - Matches all files beginning with the word "resume" and having at least one other character after, but ending in .pdf.
+      - Would return "resume1.pdf", "resume_michael.pdf", but not "resume.pdf", "michael.pdf", "resume_1.pdf.txt", or 
+        "resume_michael.txt".
+    - Example: (\d+)x(\d+)
+      - Matches display resolutions in the format "YYYYxZZZZ", such as "2560x1440" or "800x600".  Will not match "1024 x 768".
+  - | (logical OR or pipe)
+    - Matches different sets of characters.
+    - Example: (cat|dog)
+      - Matches the words "cat" or "dog" but nothing else.
+
+- Globbing vs. Regex
+  - Globbing (aka Pathname Expansion) is NOT the same as Regex!
+  - Globbing is done by bash.  The OS nor the process being run ever see the globbing syntax.  They only see the 
+    result of the globbing, which is substituted into the command line before running the process.
+  - Basic globbing expands *, ?, and [...] as shown in the `rm` examples below:
+    - rm *.jpg
+      - Delete all JPG files in the current directory.
+    - rm ?.jpg
+      - Delete all JPG files in the current directory that have 1 character filenames (a.jpg, 4.jpg, etc).
+    - rm [A-Z]*.jpb
+      - Delete all JPG files in the current directory that start with a capital letter (Animals.jpg, House.jpg, etc).
+  - Extended globbing can be enabled via the command `shopt -s extglob`
+    - More information can be found in the Linux Journal article here: http://www.linuxjournal.com/content/bash-extended-globbing
+
