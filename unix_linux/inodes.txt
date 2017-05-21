@@ -7,14 +7,16 @@
 
 - An inode is basically a pointer to a file.
 
-- A file's inode number stays the same when it is moved to another directory on the same device.
+- A file's inode number stays the same when it is moved to another directory on the same device.  If it moves to another device, it's
+  assigned a new inode number.
 
 - Files can have multiple names.
   - If multiple names hard link to the same inode then the names are equivalent.
-  - This is unlike symbolic links, which depend on the original name, not the inode.
+  - This is unlike symbolic links which depend on the original name, not the inode.
 
 - An inode may have no links.
-  - An unlinked file is removed from disk, and its resources are freed for reallocation but deletion must wait until all processes that have opened it finish accessing it.
+  - An unlinked file is removed from disk, and its resources are freed for reallocation but deletion must wait until all processes 
+    that have opened it finish accessing it.
   - This includes executable files which are implicitly held open by the processes executing them.
 
 - POSIX dictates that regular files must have to following attributes:
@@ -33,16 +35,22 @@
   - Link count for how many hard links point to the inode.
   - Pointers to the disk blocks that store the file's contents (inode pointer structure)
 
-- Usually, the maximum number of inodes is fixed at file system creation, limiting the maximum number of files the file system can hold. A typical allocation is one percent of total size.
+- Usually, the maximum number of inodes is fixed at file system creation, limiting the maximum number of files the file system can 
+  hold. A typical allocation is one percent of total partition size.
 
-- When you delete a file, what really happens is the inode is unlinked from the filename, but if some other program is using the file, it still has a link open to the OS, and will continue to be updated. A file is not really deleted until all links have been removed (even then, the data is still on the disk, but not indexed in anyway and thus very hard to recover). All of this means that you can delete executing programs while they're running without crashing and move files before they're finished downloading without corruption.
+- When you delete a file, the filename is unlinked from the inode. 
+  - If some other program is using the file then it still has a link open to the OS and will continue to be updated. 
+  - A file is not really deleted until all links have been removed (even then, the data is still on the disk, but not indexed in any way).
+  - You can delete executing programs while they're running without crashing and move files before they're finished downloading without 
+    corruption.
 
 - A directory is a list of names associated to inodes.  The directory contains an entry for:
   - Itself (.)
   - Its parent (..)
   - Each of its children (files or other directories inside the current working directory)
 
-- The file system driver must search a directory looking for a particular filename and then convert the filename to the correct corresponding inode number.
-
-- Installation of new libraries is simple with inode filesystems. A running process can access a library file while another process replaces that file, creating a new inode, and an all new mapping will exist for the new file so that subsequent attempts to access the library get the new version. This facility eliminates the need to reboot to replace currently mapped libraries.
-  - For this reason, when updating programs, best practice is to delete the old executable first and create a new inode for the updated version, so that any processes executing the old version may proceed undisturbed.
+- Installation of new libraries is simple with inode filesystems. A running process can access a library file while another process 
+  replaces that file. 
+  - When creating a new inode, an all new mapping will exist for the new file so that subsequent attempts to access the library get the 
+    new version. This eliminates the need to reboot to replace currently mapped libraries.
+  - When updating programs, it's best practice is to delete the old executable first and create a new inode for the updated version.
