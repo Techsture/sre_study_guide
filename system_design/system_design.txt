@@ -6,7 +6,8 @@
     - https://en.wikipedia.org/wiki/CAP_theorem
     - https://www.youtube.com/watch?v=gLtO0vY_M78
     - Consistency, Availability, and Partition Tolerance
-      - In a distributed system you can only have two, and Partition Tolerance will always be one.  You have to choose between          Consistency or Availability.
+      - In a distributed system you can only have two, and Partition Tolerance will always be one.  You have to choose between 
+        Consistency or Availability.
         - Consistency
           - You only give an answer to a query when you know that you're in sync
         - Availability

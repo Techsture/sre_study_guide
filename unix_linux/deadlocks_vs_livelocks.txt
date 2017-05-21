@@ -26,6 +26,7 @@
       - Prevention:
         - Disable interrupts during critical sections.
         - Use a heirarchy to determine a partial ordering of resources.
+
 - Livelocks
   - Special case of resource starvation:
     - The processes involved constantly change with regard to one another.

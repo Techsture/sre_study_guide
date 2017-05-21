@@ -36,3 +36,4 @@
     - Terminal driver instructs to clean up the process (hangup).
   - QUIT
     - Similar to TERM, it defaults to producing a core dump if not caught by the process.
+

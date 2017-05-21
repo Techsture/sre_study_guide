@@ -1,10 +1,18 @@
 # Threads (Operating Systems)
 
+- Threads
+  - Called "Light Weight Processes" (LWP) at kernel level, and threads at user level.
+  - Threads consist of:
+    - Program counter
+    - Register set
+    - Stack space
+  - Threads inherit many of the attributes from the parent process, and multiple threads can execute concurrently with a 
+    single process under a model called multi-threading.
+  - If the system has multiple cores then the threads can run in parallel. If not, they take turns in execution.
+
 - The kernel sees no distiction between processes and threads; everything is simply a runnable task.
   - Each process has a separate stack, text, data, and heap.
   - Threads have their own stack, but share text, data, and heap with the process.
-
-- Threads are called "Light Weight Processes" (LWP) at kernel level, and threads at user level.
 
 - When a thread is created, it's assigned a Thread ID.
   - Unlike a PID (which is unique across the system), a thread ID is unique only in the context of a single process.
