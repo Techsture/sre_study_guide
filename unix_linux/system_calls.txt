@@ -1,10 +1,34 @@
 # System Calls (UNIX/Linux)
 
 - API between user space and kernel space.
+
 - How a program requests a service from the kernel.
-- Five major categories of system calls:
-	- Process Control
-	- File Management
-	- Device Management
-	- Information Maintenance
-	- Communication
+
+- Five major categories of system calls (and examples):
+  - Process Control
+    - Load
+    - Execute
+    - Create Process (fork())
+    - Terminate Process
+    - wait()
+    - Set/Get Process Attributes
+    - Allocate/Free Memory
+  - File Management
+    - Create/Delete
+    - Open/Close
+    - Read/Write
+    - Set/Get File Attributes
+  - Device Management
+    - Request/Release Device
+    - Read/Write to device
+    - Set/Get Device Attributes
+    - Attach/Detach Devices
+  - Information Maintenance
+    - Set/Get Time or Date
+    - Set/Get System Data
+    - Set/Get Process, File, or Device Attributes
+  - Communication
+    - Create/Delete Connection
+    - Send/Receive Messages
+    - Transfer Status
+    - Attach/Detach Remote Devices
