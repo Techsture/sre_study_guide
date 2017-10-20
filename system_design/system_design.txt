@@ -4,7 +4,7 @@
   - The main question of distributed system design is "Did the message get there?"
   - CAP Theorem
     - https://en.wikipedia.org/wiki/CAP_theorem
-    - https://www.youtube.com/watch?v=gLtO0vY_M78
+    - ~~https://www.youtube.com/watch?v=gLtO0vY_M78~~ (broken link)
     - Consistency, Availability, and Partition Tolerance
       - In a distributed system you can only have two, and Partition Tolerance will always be one.  You have to choose between 
         Consistency or Availability.
