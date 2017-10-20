@@ -41,12 +41,12 @@
 - ifdown [interface_name]
   - Disable a network interface
   - Example: ifdown eth0
-    - Enable eth0 interface
+    - Disable eth0 interface
 
 - ifup [interface_name]
   - Enable a network interface
   - Example: ifup eth0
-    - Disable eth0 interface
+    - Enable eth0 interface
 
 - netstat
   - Display currently open Internet connections and UNIX sockets
